@@ -18,7 +18,7 @@
 ### 2. Configurar o banco de dados
 
 - Acesse o **phpMyAdmin**: [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
-- Criar um banco e passar os dados para o arquivo .envi para estabelecer a conexão
+- Importe o arquivo teste_badespi.sql no phpmyadmin
 - Rode o comando php artisan migrate --seed para criar as tabelas e popular elas
 
 ### 3. Acessar o projeto
