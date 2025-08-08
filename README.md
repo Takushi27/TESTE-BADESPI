@@ -7,3 +7,16 @@
 - [XAMPP](https://www.apachefriends.org/pt_br/index.html) instalado  
 - [VSCode](https://code.visualstudio.com/) instalado  
 - PHP (já vem com o XAMPP)
+
+
+### 1. Iniciar os serviços do XAMPP
+
+- Abra o painel do XAMPP  
+- Inicie o **Apache** e o **MySQL**
+- Rode o comando php artisan server 
+
+- 2. Configurar o banco de dados
+
+- Acesse o **phpMyAdmin**: [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
+- criar um banco e passar os dados para o arquivo .envi para estabelecer a conexão
+- Rode o comando php artisan migrate --seed para criar as tabelas e popular elas
