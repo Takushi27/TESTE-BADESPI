@@ -15,7 +15,7 @@
 - Inicie o **Apache** e o **MySQL**
 - Rode o comando php artisan server 
 
-- 2. Configurar o banco de dados
+### 2. Configurar o banco de dados
 
 - Acesse o **phpMyAdmin**: [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
 - criar um banco e passar os dados para o arquivo .envi para estabelecer a conexão
