@@ -23,6 +23,6 @@
 
 ### 3. Acessar o projeto
 - Abra o navegador em http://localhost:8000
-- Ai pode se cadastrar ou usar o login de teste
-       - email: teste@gmail.com
-       - senha: admin123
+- Ai pode se cadastrar ou usar o login de teste:
+- email: teste@gmail.com
+- senha: admin123
