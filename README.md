@@ -20,3 +20,6 @@
 - Acesse o **phpMyAdmin**: [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
 - criar um banco e passar os dados para o arquivo .envi para estabelecer a conexão
 - Rode o comando php artisan migrate --seed para criar as tabelas e popular elas
+
+### 3. Acessar o projeto
+- Abra o navegador em http://localhost:8000
