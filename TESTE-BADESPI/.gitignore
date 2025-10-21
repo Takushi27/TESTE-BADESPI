@@ -19,5 +19,5 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
-/.evn
-/.env.example
+.env
+.env.example
