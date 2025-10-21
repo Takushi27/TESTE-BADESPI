@@ -1,0 +1,11 @@
+#barra-pesquisa{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+#barra-pesquisa:hover {
+    transform: translateY(1px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}

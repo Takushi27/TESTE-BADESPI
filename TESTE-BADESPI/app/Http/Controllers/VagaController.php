@@ -34,8 +34,12 @@ class VagaController extends Controller
         $vaga->descrição = $request->descrição;
         $vaga->tipo = $request->tipo;
         $vaga->empresa = $request->Empresa;
-        $vaga->salario = str_replace(',', '.', $request->Salario);
+        $salario = $request->salario;
+        $salario = str_replace('.', '', $salario);
+        $salario = str_replace(',', '.', $salario);
+        $vaga->salario = is_numeric($salario) ? (float)$salario : null;
         $vaga->recrutadorid = auth()->id();
+
 
         $vaga->save();
         return redirect('/');
@@ -65,7 +69,10 @@ class VagaController extends Controller
         $vaga->descrição = $request->descrição;
         $vaga->tipo = $request->tipo;
         $vaga->empresa = $request->Empresa;
-        $vaga->salario = str_replace(',', '.', $request->Salario);
+        $salario = $request->salario;
+        $salario = str_replace('.', '', $salario);
+        $salario = str_replace(',', '.', $salario);
+        $vaga->salario = is_numeric($salario) ? (float)$salario : 0;
 
         $vaga->save();
 
@@ -79,25 +86,15 @@ class VagaController extends Controller
     }
     public function search(Request $request)
     {
-        try {
-            $query = $request->input('query');
+       $query = $request->input('query');
 
-            $vagas = Vagas::query();
+       $vagas =  Vagas::where('name', 'like', "%{$query}%")
+                ->orWhere('descrição', 'like', "%{$query}%")
+                ->orWhere('tipo', 'like', "%{$query}%")
+                ->orWhere('empresa', 'like', "%{$query}%")
+                ->get();
 
-            if ($query) {
-                $vagas->where('name', 'LIKE', "%{$query}%")
-                    ->orWhere('descrição', 'LIKE', "%{$query}%");
-            }
-
-            $results = $vagas->limit(10)->get();
-
-            return response()->json($results);
-        } catch (\Throwable $e) {
-            return response()->json([
-                'error' => $e->getMessage(),
-                'file'  => $e->getFile(),
-                'line'  => $e->getLine()
-            ], 500);
-        }
+        
+        return response()->json($vagas);
     }
 }

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('tipo');
             $table->text('descrição');
             $table->string('empresa');
-            $table->decimal('salario');
+            $table->decimal('salario', 10, 2);
             $table->boolean('status')->default(true);;
             $table->unsignedBigInteger('recrutadorid');
             $table->timestamps();

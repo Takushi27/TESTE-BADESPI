@@ -7,7 +7,7 @@
 <div id="vagas-create-container" class="col-md-6-offset-md-3"> 
 
     <h1>Criar Vaga</h1> 
-    <form action="/vagas" method="POST">
+    <form id='formVaga' action="/vagas" method="POST">
       @csrf
         <div class="form-group">
             <label for="">Vaga</label>
@@ -41,13 +41,29 @@
 
           <div class="form-group">
             <label for="">Salario</label>
-            <input type="text" class="form-control" id="Salario" name="Salario" placeholder="Salario">
+            <input type="text" class="form-control" id="salario" name="salario" placeholder="Salario">
+            <span id="erroSalario" style="color:red; display:none;">Formato inválido</span>
         </div>
         <input type="submit" class="btn custom-btn" value="Cadastrar Vaga">
 
     </form>
 
 </div>
+<script>
+  document.getElementById('formVaga').addEventListener('submit', function (e){
+    const salario = document.getElementById('salario').value.trim();
+    const erro = document.getElementById('erroSalario');
 
+    const regex = /^\d{1,3}(\.\d{3})*(,\d{2})$|^\d+(,\d{2})$/;
+
+    if(!regex.test(salario)){
+      e.preventDefault();
+      erro.style.display = 'inline';
+    }
+    else{
+      erro.style.display = 'none';
+    }
+  });
+</script>
 
 @endsection

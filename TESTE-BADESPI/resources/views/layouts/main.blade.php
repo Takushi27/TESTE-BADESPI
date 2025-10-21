@@ -18,10 +18,11 @@
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <img src="/img/icons8-pasta-50.png" alt="">
-            @auth
-                <p class="saudação-usuario">Olá, {{ Auth::user()->name }}</p>
-            @endauth
+                    <a href="/" id="back-menu"><img src="/img/icons8-pasta-50.png" alt=""></a>
+                @auth
+                    <a href="/" id="back-menu"><p class="saudação-usuario">Olá, {{ Auth::user()->name }}</p></a>
+                @endauth
+            <a href="/" class="navbar-brand"></a>
             <a href="/" class="navbar-brand"></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">

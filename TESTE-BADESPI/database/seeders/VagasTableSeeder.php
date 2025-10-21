@@ -13,7 +13,7 @@ class VagasTableSeeder extends Seeder
     {
         $this -> createDefaulVaga();
         $this -> createDefaultVaga2();
-        $this -> createVagas(12);
+        $this -> createVagas(100);
     }
      public function createDefaulVaga(){
         Vagas::factory()->create([

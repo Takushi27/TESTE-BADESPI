@@ -5,7 +5,7 @@ h1{
     font-family: 'Roboto';
 }
 footer#main-footer {
-    background-color: #f1f1f1;
+    background-color: #f1f5f9;
     padding: 15px 0;
     text-align: center;
     border-top: 1px solid #ddd;
@@ -196,3 +196,8 @@ main {
     overflow-y: auto;
     margin-top: 10px;
 }
+#back-menu{
+    text-decoration: none;
+    color: inherit;
+}
+

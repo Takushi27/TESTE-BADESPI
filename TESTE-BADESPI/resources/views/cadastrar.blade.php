@@ -18,6 +18,9 @@
             <label for="">Email</label>
             <input type="text" class="form-control" id="email" name="email" placeholder="Digite Email">
         </div>
+        @if($errors->has('email'))
+            <span style="color:red">{{$errors->first('email')}}</span>
+        @endif
 
         <div class="form-group">
             <label for="">Senha</label>
@@ -27,9 +30,8 @@
         <div class="form-group-cadastro">
             <label for="recrutador">Recrutador?</label>
             <select class="form-control form-control-sm w-50" name="recrutador" id="recrutador">
-            <option value=""></option>
-            <option value="Sim">Sim</option>
-            <option value="Não">Não</option>
+            <option value="Sim" {{ old('recrutador') == 'Sim' ? 'selected' : '' }}>Sim</option>
+            <option value="Não" {{ old('recrutador', 'Não') == 'Não' ? 'selected' : '' }}>Não</option>
             </select>
         </div>
         <input type="submit" class="btn custom-btn" value="Cadastrar">

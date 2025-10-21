@@ -11,6 +11,15 @@ class CandidaturasController extends Controller
     public function storeCandidaturas(Request $request)
     {
 
+        $request->validate([
+            'curriculo' => 'required|file|mimes:pdf,doc,docx|max:5000',
+            'vagaid' => 'required|exists:vagas,id',
+            ], [
+                'curriculo.required' => 'Por favor, envie um arquivo de currículo.',
+                'curriculo.mimes' => 'O currículo deve estar em formato PDF, DOC ou DOCX.',
+                'curriculo.max' => 'O tamanho máximo do arquivo é 5MB.',
+                'vagaid.exists' => 'A vaga selecionada não existe.',
+        ]);
 
         $file = $request->file('curriculo');
         $fileContent = file_get_contents($file->getRealPath());

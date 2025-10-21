@@ -36,4 +36,7 @@ class Usuarios extends Authenticatable
     {
         return $this->hasMany(Candidaturas::class, 'candidatoid');
     }
+    public static function verificarEmail($email){
+        return self::where('email', $email)->exists();
+    }
 }
