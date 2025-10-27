@@ -17,9 +17,8 @@ Guia de Execução do Projeto
 
 ### 2. Configurar o banco de dados
 
-- Acesse o **phpMyAdmin**: [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
-- Importe o arquivo teste_badespi.sql no phpmyadmin
-- Rode o comando php artisan migrate --seed para criar as tabelas e popular elas
+- Conecte ao seu banco mysql com o nome do banco, root e a senha, caso tenha
+- Rode o comando /php artisan migrate --seed para criar as tabelas e popular elas com o factory e seeders
 
 ### 3. Acessar o projeto
 - Abra o navegador em http://localhost:8000
