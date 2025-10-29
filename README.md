@@ -12,7 +12,7 @@ Guia de Execução do Projeto
 ### 1. Iniciar os serviços do XAMPP
 
 - Abra o painel do XAMPP  
-- Inicie o **Apache** e o **MySQL**
+- Startar o **Apache** e o **MySQL**
 - Rode o comando php artisan server 
 
 ### 2. Configurar o banco de dados
