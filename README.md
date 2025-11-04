@@ -21,7 +21,7 @@ A arquitetura do projeto segue o padrão **MVC (Model-View-Controller)**, utiliz
 * **ORM Eloquent:** Mapeamento objeto-relacional para interações seguras e eficientes com o banco de dados.
 * **Motor de Template Blade:** Renderização de views dinâmicas no lado do servidor, permitindo a construção de interfaces componentizadas.
 * **Operações CRUD:** Funcionalidade completa para Criar, Ler, Atualizar e Excluir vagas de emprego.
-* **Autenticação de Usuários:** O sistema (provavelmente) diferencia dois tipos de perfis:
+* **Autenticação de Usuários:** O sistema diferencia dois tipos de perfis, recrutador e candidato:
     * **Recrutadores:** Podem se cadastrar, fazer login, publicar novas vagas e gerenciar suas postagens.
     * **Candidatos:** Podem pesquisar, filtrar e visualizar as vagas disponíveis.
 
