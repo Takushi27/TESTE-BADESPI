@@ -17,7 +17,7 @@ A arquitetura do projeto segue o padrão **MVC (Model-View-Controller)**, utiliz
 
 ### Funcionalidades Principais
 
-* **Sistema de Roteamento:** Gerenciamento de rotas web para navegação e endpoints de API.
+* **Sistema de Roteamento:** Gerenciamento de rotas web para navegação.
 * **ORM Eloquent:** Mapeamento objeto-relacional para interações seguras e eficientes com o banco de dados.
 * **Motor de Template Blade:** Renderização de views dinâmicas no lado do servidor, permitindo a construção de interfaces componentizadas.
 * **Operações CRUD:** Funcionalidade completa para Criar, Ler, Atualizar e Excluir vagas de emprego.
